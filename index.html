@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaAI – Dark Mode AI Automation</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Navigation Bar -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-xl bg-gradient-to-tr from-purple-500 to-fuchsia-500 flex items-center justify-center text-xs font-bold">
+          NA
+        </div>
+        <span class="text-xl font-semibold tracking-tight">NovaAI</span>
+      </div>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#hero" class="hover:text-purple-400 transition">Home</a>
+        <a href="#features" class="hover:text-purple-400 transition">Features</a>
+        <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+        <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
+        <button class="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-purple-600 hover:bg-purple-500 transition shadow-lg shadow-purple-600/40">
+          Get Started
+        </button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-700 hover:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        aria-label="Toggle navigation"
+      >
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobile-menu" class="md:hidden border-t border-slate-800 hidden">
+      <div class="px-6 py-4 space-y-3 text-sm">
+        <a href="#hero" class="block hover:text-purple-400 transition">Home</a>
+        <a href="#features" class="block hover:text-purple-400 transition">Features</a>
+        <a href="#contact" class="block hover:text-purple-400 transition">Contact</a>
+        <a href="#pricing" class="block hover:text-purple-400 transition">Pricing</a>
+        <button class="w-full mt-2 inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-purple-600 hover:bg-purple-500 transition shadow-lg shadow-purple-600/40">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="max-w-6xl mx-auto px-6 py-20 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Hero text -->
+        <div class="space-y-6">
+          <span class="inline-flex items-center rounded-full border border-purple-500/40 px-3 py-1 text-xs font-medium text-purple-200 bg-purple-500/10">
+            Powered by AI · Built for teams
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+            Automate your <span class="text-purple-400">workflow</span> with intelligent AI assistants.
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-xl">
+            NovaAI helps your team offload repetitive tasks, summarize information,
+            and make smarter decisions in real time — all inside a single unified workspace.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium bg-purple-600 hover:bg-purple-500 transition shadow-lg shadow-purple-600/40">
+              Start Free Trial
+            </button>
+            <button class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium border border-slate-700 hover:border-purple-500 hover:text-purple-300 transition">
+              Watch Demo
+            </button>
+          </div>
+          <div class="flex items-center gap-4 pt-2 text-xs text-slate-400">
+            <span class="flex -space-x-2">
+              <span class="h-7 w-7 rounded-full bg-slate-800 border border-slate-700"></span>
+              <span class="h-7 w-7 rounded-full bg-slate-700 border border-slate-700"></span>
+              <span class="h-7 w-7 rounded-full bg-purple-600 border border-purple-400"></span>
+            </span>
+            <span>Trusted by fast-growing product teams worldwide.</span>
+          </div>
+        </div>
+
+        <!-- Hero visual -->
+        <div class="relative">
+          <div class="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-purple-500/40 blur-3xl opacity-40 pointer-events-none"></div>
+          <div class="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 p-5 shadow-2xl shadow-purple-900/40">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-medium text-slate-400">Automation overview</span>
+              <span class="inline-flex items-center rounded-full bg-slate-900 px-2 py-1 text-[10px] text-purple-300 border border-slate-700">
+                Live · 24/7
+              </span>
+            </div>
+            <div class="space-y-4">
+              <div class="grid grid-cols-3 gap-3 text-xs">
+                <div class="rounded-xl bg-slate-900/80 border border-slate-800 p-3">
+                  <p class="text-slate-400 mb-1">Tasks automated</p>
+                  <p class="text-lg font-semibold">12,384</p>
+                </div>
+                <div class="rounded-xl bg-slate-900/80 border border-slate-800 p-3">
+                  <p class="text-slate-400 mb-1">Time saved</p>
+                  <p class="text-lg font-semibold">4,213h</p>
+                </div>
+                <div class="rounded-xl bg-slate-900/80 border border-slate-800 p-3">
+                  <p class="text-slate-400 mb-1">Teams</p>
+                  <p class="text-lg font-semibold">214</p>
+                </div>
+              </div>
+              <div class="h-32 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-center text-xs text-slate-500">
+                AI workflow chart / analytics visualization placeholder
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="border-t border-slate-900 bg-slate-950">
+      <div class="max-w-6xl mx-auto px-6 py-20 lg:py-24">
+        <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+          <p class="text-xs font-semibold tracking-wide text-purple-300 uppercase">Features</p>
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+            Everything you need to automate your workflows.
+          </h2>
+          <p class="text-sm text-slate-400">
+            NovaAI connects your tools, listens to your data, and orchestrates complex workflows
+            with simple natural language instructions.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature card -->
+          <article class="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-900/30">
+            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold mb-2">Real-time automation</h3>
+            <p class="text-sm text-slate-400">
+              Trigger workflows in real time based on events from your CRM, helpdesk, or internal tools.
+            </p>
+          </article>
+
+          <article class="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-900/30">
+            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4m-9 4v5" />
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold mb-2">Unified knowledge</h3>
+            <p class="text-sm text-slate-400">
+              Connect docs, tickets, and conversations so your AI assistant always has full context.
+            </p>
+          </article>
+
+          <article class="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-900/30">
+            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 3v18m9-9H3" />
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold mb-2">No-code builder</h3>
+            <p class="text-sm text-slate-400">
+              Design workflows with drag-and-drop blocks and natural language, no engineering required.
+            </p>
+          </article>
+
+          <article class="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-900/30">
+            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M4.5 9.75l7.5-6 7.5 6V18a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 18V9.75z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold mb-2">Enterprise security</h3>
+            <p class="text-sm text-slate-400">
+              SOC2-ready controls, granular permissions, and full audit trails built in from day one.
+            </p>
+          </article>
+
+          <article class="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-900/30">
+            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold mb-2">Human-in-the-loop</h3>
+            <p class="text-sm text-slate-400">
+              Keep humans in control with approval steps and review queues for sensitive workflows.
+            </p>
+          </article>
+
+          <article class="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-900/30">
+            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/40">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold mb-2">Explainable insights</h3>
+            <p class="text-sm text-slate-400">
+              See why the AI made decisions with transparent logs and human-readable summaries.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="border-t border-slate-900 bg-slate-950">
+      <div class="max-w-4xl mx-auto px-6 py-20 lg:py-24">
+        <div class="text-center max-w-xl mx-auto mb-10 space-y-3">
+          <p class="text-xs font-semibold tracking-wide text-purple-300 uppercase">Contact</p>
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+            Let’s build your next AI workflow.
+          </h2>
+          <p class="text-sm text-slate-400">
+            Share a bit about your team and use case, and we’ll follow up with a tailored demo.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-8 lg:p-10">
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div class="space-y-4 text-sm">
+              <h3 class="text-lg font-semibold">Tell us about your team</h3>
+              <p class="text-slate-400">
+                Whether you&apos;re automating support, ops, or internal tools, NovaAI adapts to your stack.
+                We typically respond within 1 business day.
+              </p>
+              <ul class="space-y-2 text-slate-400">
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
+                  Onboarding support for your first workflows
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
+                  Guidance on security, data, and access control
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
+                  Best practices from teams like yours
+                </li>
+              </ul>
+            </div>
+
+            <form class="space-y-4" novalidate>
+              <div>
+                <label for="name" class="block text-xs font-medium text-slate-300 mb-1">
+                  Full Name<span class="text-purple-400">*</span>
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  minlength="2"
+                  class="block w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/40"
+                  placeholder="Prathika Kulal"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-medium text-slate-300 mb-1">
+                  Work Email<span class="text-purple-400">*</span>
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  class="block w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/40"
+                  placeholder="you@company.com"
+                />
+              </div>
+
+              <div>
+                <label for="company" class="block text-xs font-medium text-slate-300 mb-1">
+                  Company / Organization
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  class="block w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/40"
+                  placeholder="Acme Inc."
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-medium text-slate-300 mb-1">
+                  What would you like to automate?<span class="text-purple-400">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  minlength="10"
+                  rows="4"
+                  class="block w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/40"
+                  placeholder="Describe your current workflow, tools you use, and desired outcome..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-purple-600 hover:bg-purple-500 transition shadow-lg shadow-purple-600/40"
+              >
+                Submit request
+              </button>
+
+              <p class="text-[11px] text-slate-500">
+                By submitting, you agree to be contacted about NovaAI. We respect your inbox and will keep your data secure.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6 py-12 space-y-8">
+      <div class="grid gap-8 md:grid-cols-4">
+        <div class="space-y-3 md:col-span-2">
+          <div class="flex items-center gap-2">
+            <div class="h-7 w-7 rounded-xl bg-gradient-to-tr from-purple-500 to-fuchsia-500 flex items-center justify-center text-[10px] font-bold">
+              NA
+            </div>
+            <span class="text-lg font-semibold tracking-tight">NovaAI</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-md">
+            NovaAI is the automation layer for modern teams — connect your tools, delegate the busywork,
+            and stay focused on impactful work.
+          </p>
+        </div>
+
+        <div class="text-sm space-y-3">
+          <h3 class="font-semibold text-slate-200">Product</h3>
+          <ul class="space-y-1 text-slate-400">
+            <li><a href="#features" class="hover:text-purple-300 hover:underline">Features</a></li>
+            <li><a href="#pricing" class="hover:text-purple-300 hover:underline">Pricing</a></li>
+            <li><a href="#hero" class="hover:text-purple-300 hover:underline">Use cases</a></li>
+          </ul>
+        </div>
+
+        <div class="text-sm space-y-3">
+          <h3 class="font-semibold text-slate-200">Company</h3>
+          <ul class="space-y-1 text-slate-400">
+            <li><a href="#" class="hover:text-purple-300 hover:underline">About</a></li>
+            <li><a href="#" class="hover:text-purple-300 hover:underline">Blog</a></li>
+            <li><a href="#contact" class="hover:text-purple-300 hover:underline">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2025 NovaAI. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 hover:border-purple-500 hover:text-purple-300 transition">
+            <!-- X / Twitter icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.25 4.5h2.02l-4.42 5.06L21 19.5h-4.5l-3.15-5.1-3.6 5.1H7.73l4.7-5.96L6 4.5h4.62l2.84 4.56 3. -4.56z"/>
+            </svg>
+          </a>
+          <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 hover:border-purple-500 hover:text-purple-300 transition">
+            <!-- LinkedIn icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.5 6.5a2 2 0 11-4 0 2 2 0 014 0zM3 9h3v9H3zM10 9h2.8v1.2h.1A3.07 3.07 0 0119 13v5h-3v-4.2c0-1-.4-1.8-1.3-1.8-.8 0-1.2.6-1.2 1.8V18h-3z"/>
+            </svg>
+          </a>
+          <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 hover:border-purple-500 hover:text-purple-300 transition">
+            <!-- GitHub icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.13-1.52-1.13-1.52-.92-.65.07-.64.07-.64 1.02.07 1.56 1.07 1.56 1.07.9 1.57 2.36 1.12 2.94.86.09-.68.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.2 9.2 0 0112 6.3c.85 0 1.7.12 2.5.35 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.71 1.03 1.62 1.03 2.74 0 3.94-2.34 4.8-4.57 5.06.36.32.68.95.68 1.92 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.48A10.03 10.03 0 0022 12.26C22 6.58 17.52 2 12 2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile nav toggle script -->
+  <script>
+    const mobileButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileButton && mobileMenu) {
+      mobileButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
